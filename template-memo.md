@@ -9,8 +9,9 @@
 
 ---
 
-## Executive Summary (≤150 words)
+## Executive Summary 
 Our U.S.-based pharmaceutical company expects to receive €8,000,000 in one year from a European client. With the current market conditions of spot rate EUR/USD = 1.16 and one-year forward = 1.0890, the U.S. dollar value of this receivable is exposed to exchange rate fluctuations. If the euro depreciates against the dollar, the USD proceeds will decline, potentially decreasing our profit margins. To mitigate this risk, we will be taking a look at three hedging strategies: 1. a forward contract, 2. money market hedge, and 3. an option-based hedge (using EUR puts or calls). Each strategy provides varying levels of protection, flexibility, and cost. This memo outlines the exposure, the rationale for hedging, and the pros and cons of each approach to help make the most informed decision on FX risk management.
+
 ---
 
 ## Background & Objectives
@@ -19,6 +20,7 @@ Our company knows it has a €8 million receivable due in one year, which repres
 The risk arises because the euro may weaken relative to the dollar during the year. At the current spot rate (1.16), the receivable is worth $9.28 million USD, but if the rate falls to the forward rate of 1.09 or lower, proceeds could drop by nearly $560,000 or more.
 
 Our objective is to protect USD cash flows while balancing cost, flexibility, and potential upside if the euro appreciates. Hedging ensures more predictable outcomes and helps stabilize earnings against currency volatility.
+
 ---
 
 ## Methods
@@ -34,6 +36,7 @@ Option Hedge (Put on EUR)
 A put option on EUR/USD with a strike price near 1.16 would give the company the right, but not the obligation, to sell euros at that rate in one year. The option provides downside protection if the euro depreciates while allowing full participation if the euro appreciates. The downside is the upfront premium cost of approximately $0.021 per euro, or about $168,000 for the full exposure. 
 
 These methods will be evaluated quantitatively using spreadsheet modeling and scenario analysis to compare their outcomes under different exchange rate conditions.
+
 ---
 
 ## Limitations & Next Steps
@@ -50,6 +53,7 @@ Prompt Engineering - Draft a structured AI prompt that, when given the key input
 Final Analysis & Recommendation - Use the completed model to test exchange rate scenarios, assess sensitivity to rate changes, and recommend the most cost-effective hedge strategy.
 
 These next steps will provide a clear, data-driven framework for selecting the best hedge structure, ensuring informed and defensible financial decision-making.
+
 ---
 
 ## References
