@@ -1,11 +1,11 @@
-# [Memo Title]
+# Executive Memo
 
 **Created by:** [Mason Pritts]  
 **Updated by:** [Mason Pritts]  
 **Date Created:** [10/23/2025]  
 **Date Updated:** [10/24/2025]  
 **Version:** [1.0]
-**LLM Used:"" [ChatGPT] (optional if LLm used)
+**LLM Used:"" [ChatGPT]
 
 ---
 
