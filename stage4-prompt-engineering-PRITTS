@@ -1,0 +1,103 @@
+You are a financial modeling assistant with advanced Excel generation capabilities.
+
+# GOAL
+Create a professional Excel spreadsheet that models forward, money market, and option hedges for a EUR receivable.
+
+# CONTEXT FILES (GitHub)
+Use the logic and structure in the following files as the modeling standard:
+- https://github.com/masonp44/fin-321/blob/main/template-memo.md
+- https://github.com/masonp44/fin-321/blob/main/stage2-spec-PRITTS.md
+
+# INPUT VARIABLES (Explicit Values)
+Use the following exact values in the spreadsheet:
+
+FC_AMT = 2,850,000            ⟹ Named Range: FC_AMT
+Spot rate at execution (S0_in) = 1.0934          ⟹ Named Range: S0_in
+Forward rate offered (F0_in) = 1.0875           ⟹ Named Range: F0_in
+USD interest rate (annual) = 5.10%               ⟹ Named Range: R_USD
+EUR interest rate (annual) = 2.71%               ⟹ Named Range: R_FC
+Put strike price = 1.0900                        ⟹ Named Range: K_PUT
+Call strike price = 1.0900                       ⟹ Named Range: K_CALL
+Put premium = 0.017                              ⟹ Named Range: PREM_PUT
+Call premium = 0.022                             ⟹ Named Range: PREM_CALL
+Time to maturity in days = 360                   ⟹ Named Range: T_DAYS
+
+# MARKET LOOKUPS (Assumptions to be hard-coded)
+- Spot rate used for sensitivity table must match S0_in
+- Use the given spot; no additional API calls assumed
+
+# NAMED RANGES REQUIRED
+Define the following named ranges exactly:
+FC_AMT, S0_in, F0_in, R_USD, R_FC,
+K_PUT, K_CALL, PREM_PUT, PREM_CALL,
+T_DAYS, T_YRS
+
+# COLOR CODING RULES
+Apply the following fill colors in Excel:
+- Yellow = Inputs / decision variables (S0_in, F0_in, FC_AMT, K_PUT, K_CALL, PREM_PUT, PREM_CALL)
+- Blue = Assumptions (R_USD, R_FC, T_DAYS, T_YRS)
+- Green = All formulas / calculations
+- Gray = Final outputs / KPIs
+
+# CALCULATIONS REQUIRED
+
+## A. Time Conversion
+- T_YRS = T_DAYS / 360
+
+## B. Forward Hedge
+1. Calculate USD cash inflow if hedged forward:
+   = FC_AMT × F0_in
+2. Report revenue in USD under forward hedge
+
+## C. Money Market Hedge (Three-Step Logic)
+1. Discount EUR receivable:
+   EUR present value = FC_AMT / (1 + R_FC × T_YRS)
+2. Convert to USD at spot:
+   USD value = EUR present value × S0_in
+3. Invest USD at USD rate:
+   USD hedge proceeds = USD value × (1 + R_USD × T_YRS)
+
+## D. Option Hedge
+1. Cost of setting up the option positions:
+   Total premium cost = FC_AMT × PREM_PUT + FC_AMT × PREM_CALL
+2. Option payoff formulas:
+   - Put payoff = MAX(K_PUT − Spot scenario, 0) × FC_AMT
+   - Call payoff = MAX(Spot scenario − K_CALL, 0) × FC_AMT
+3. Net USD outcome with options = (Option payoff − Premium cost)
+
+## E. Sensitivity Analysis
+Build a table for Spot from 0.95×S0_in to 1.05×S0_in at uniform steps (e.g., 5 or 11 points):
+- Column A: Spot scenario
+- Column B: Forward USD outcome
+- Column C: Money Market USD outcome
+- Column D: Option USD outcome
+- Highlight formulas in GREEN
+
+## F. Clean Output Section (Gray)
+Report:
+- Forward hedge value (USD)
+- Money market hedge value (USD)
+- Option hedge value (USD)
+- Sensitivity summary: Best hedge per scenario
+
+# FORMATTING & LABELS
+- Insert labeled sections: Inputs, Assumptions, Calculations, Sensitivity Results, KPIs
+- Freeze top row
+- Auto-fit columns
+- Use consistent number formatting: 2 decimals for rates, currency for USD/EUR
+
+# VERIFICATION & CROSS-CHECKS
+Include a verification section that:
+1. Validates parity:
+   - Check if Forward hedge ≈ Money Market hedge within a tolerance (show difference)
+2. Confirms that **all named ranges exist** and are referenced in formulas
+3. Exports a table listing every named range and its address
+4. Returns a **full formula mapping**: each cell’s direct formula (not just value)
+
+# OUTPUT
+- Generate a downloadable Excel file named: `Hedge_Model_EUR_Receivable.xlsx`
+- All wand color coding, named ranges, and sections must be present
+- Provide a sheet named “Documentation” summarizing how each calculation was implemented
+
+# FINAL INSTRUCTIONS
+Return only the downloadable `.xlsx` file — no additional text description.
