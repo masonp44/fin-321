@@ -1,13 +1,9 @@
 # Memo: Executive Summary of FX Hedging Strategy for EUR Receivable
 
 **To:** Senior Management
-
 **From:** Treasury Analyst
-
 **Date:** December 12, 2025
-
 **Subject:** FX Risk Mitigation for €8,000,000 Receivable
-
 **Version:** [1.0] **LLM Used:"" [Gemini]
 
 ---
