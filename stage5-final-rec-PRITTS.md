@@ -14,7 +14,7 @@
 
 ### A. Exposure Summary
 
-Our firm holds a significant foreign currency exposure: a **€8,000,000 receivable** due in **one year**. Since our functional currency is the USD, any weakening of the Euro against the Dollar over the next 12 months will negatively impact our final cash flows. This FX risk is substantial, as an unhedged position exposes us to a potential range of outcomes from a low of $\$8,800,000$ (if EUR/USD drops to $1.10$) to a high of $9,760,000 (if EUR/USD reaches $1.22$).
+Our firm holds a significant foreign currency exposure: a **€8,000,000 receivable** due in **one year**. Since our functional currency is the USD, any weakening of the Euro against the Dollar over the next 12 months will negatively impact our final cash flows. This FX risk is substantial, as an unhedged position exposes us to a potential range of outcomes from a low of $8,800,000 (if EUR/USD drops to $1.10) to a high of $9,760,000 (if EUR/USD reaches $1.22).
 
 ### B. Summary of Hedge Outcomes
 
