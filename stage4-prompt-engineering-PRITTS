@@ -11,9 +11,9 @@ Use the logic and structure in the following files as the modeling standard:
 # INPUT VARIABLES (Explicit Values)
 Use the following exact values in the spreadsheet:
 
-FC_AMT = 2,850,000            ⟹ Named Range: FC_AMT
+Foreign-currency receivable = 8,000,000          ⟹ Named Range: FC_AMT
 Spot rate at execution (S0_in) = 1.0934          ⟹ Named Range: S0_in
-Forward rate offered (F0_in) = 1.0875           ⟹ Named Range: F0_in
+Forward rate offered (F0_in) = 1.0875            ⟹ Named Range: F0_in
 USD interest rate (annual) = 5.10%               ⟹ Named Range: R_USD
 EUR interest rate (annual) = 2.71%               ⟹ Named Range: R_FC
 Put strike price = 1.0900                        ⟹ Named Range: K_PUT
